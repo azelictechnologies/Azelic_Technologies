@@ -1,0 +1,208 @@
+ /* Basic Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    position: relative;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between logo, menu, and share icon */
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+    text-align: center;
+}
+.logo img {
+    width: 43px; /* Adjust the width as needed */
+    height: auto;/* Keeps the aspect ratio intact */
+}
+
+/* Menu Icon (Left-Top Corner) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Share Icon (Right-Top Corner) */
+.share-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu (Left Under Menu Icon) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #34495e;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.dropdown-menu a:hover {
+    background-color: #1abc9c;
+}
+
+/* Social Media Icons (Right Under Share Icon) */
+.social-media-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    transition: transform 0.3s ease;
+    flex-direction: column; /* Align icons vertically */
+}
+
+.social-media-menu.show {
+    display: flex; /* Use flexbox for vertical layout */
+    flex-direction: column; /* Ensure icons are displayed vertically */
+}
+
+.social-media-menu a {
+    display: block; /* Make each icon take a full line */
+    width: 40px;
+    height: 40px;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin: 5px 0; /* Add vertical spacing between icons */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media-menu a:hover {
+    background-color: #1abc9c;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    min-height: calc(100vh - 140px); /* Account for header and footer */
+}
+
+main h1 {
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px){
+    header {
+        padding: 15px;
+    }
+
+    .logo img {
+    width: 22px; /* Adjust the width as needed */
+    height: auto;
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .menu-icon,
+    .share-icon {
+        font-size: 26px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-menu {
+        width: 50%;
+        left: 0;
+        padding: 8px 0;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 15px;
+    }
+
+    .social-media-menu {
+        top: 60px;
+        right: 15px;
+    }
+}
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+    width: 22px; /* Adjust the width as needed */
+    height: auto; }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    .dropdown-menu {
+        width: 50%;
+        left: 0;
+        padding: 6px 0;
+    }
+
+    .dropdown-menu a {
+        padding: 8px 12px;
+    }
+
+    .social-media-menu a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+}
