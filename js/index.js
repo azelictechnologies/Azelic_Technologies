@@ -1,12 +1,5 @@
 function loadPage(page) {
-    fetch('index.html')
-        .then(response => response.text())
-        .then(headerData => {
-            document.getElementById('header-container').innerHTML = headerData;
-
-            // After the header is loaded, load the requested page (main content)
-            return fetch(page);
-        })
+    fetch(page)
         .then(response => {
             if (!response.ok) {
                 throw new Error("Page not found");
@@ -14,12 +7,8 @@ function loadPage(page) {
             return response.text();
         })
         .then(data => {
+            // Replace the content of the main section
             document.getElementById("content").innerHTML = data;
-            return fetch('footer.html');
-        })
-        .then(response => response.text())
-        .then(footerData => {
-            document.getElementById('footer-container').innerHTML = footerData;
         })
         .catch(error => {
             console.error(error);
