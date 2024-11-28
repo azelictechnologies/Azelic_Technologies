@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Azelic Technologies - Innovating logistics through cutting-edge telematics.">
+    <title>Azelic Technologies | Home</title>
+    <link rel="icon" href="favicon.ico"> <!-- Optional: Add a favicon -->
+    <style>
+        /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center; /* Center the logo in the middle */
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Menu Icon (Left-Top Corner) */
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Share Icon (Right-Top Corner) */
+        .share-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Dropdown Menu (Left Under Menu Icon) */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: #34495e;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #2c3e50;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Social Media Icons (Right Under Share Icon) */
+        .social-media-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            transition: transform 0.3s ease;
+            flex-direction: column; /* Align icons vertically */
+        }
+
+        .social-media-menu.show {
+            display: flex; /* Use flexbox for vertical layout */
+            flex-direction: column; /* Ensure icons are displayed vertically */
+        }
+
+        .social-media-menu a {
+            display: block; /* Make each icon take a full line */
+            width: 40px;
+            height: 40px;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            margin: 5px 0; /* Add vertical spacing between icons */
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-media-menu a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            min-height: calc(100vh - 140px); /* Account for header and footer */
+        }
+
+        main h1 {
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative; 
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .menu-icon,
+            .share-icon {
+                font-size: 26px;
+            }
+
+            main h1 {
+                font-size: 1.8rem;
+            }
+
+            .dropdown-menu {
+                width: 50%;
+                left: 0;
+                padding: 8px 0;
+            }
+
+            .dropdown-menu a {
+                padding: 10px 15px;
+            }
+
+            .social-media-menu {
+                top: 60px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            main h1 {
+                font-size: 1.5rem;
+            }
+
+            .dropdown-menu {
+                width: 50%;
+                left: 0;
+                padding: 6px 0;
+            }
+
+            .dropdown-menu a {
+                padding: 8px 12px;
+            }
+
+            .social-media-menu a {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-icon" onclick="toggleDropdown(event)">&#9776;</div>
+        <div class="logo">Azelic Technologies</div>
+        <div class="share-icon" onclick="toggleSocialMedia(event)">&#9733;</div>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown" class="dropdown-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#blog">Blog</a>
+        <a href="#support">Support</a>
+        <a href="#careers">Careers</a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div id="socialMedia" class="social-media-menu">
+        <a href="https://www.facebook.com" target="_blank">F</a>
+        <a href="https://www.twitter.com" target="_blank">T</a>
+        <a href="https://www.linkedin.com" target="_blank">L</a>
+        <a href="https://www.instagram.com" target="_blank">I</a>
+    </div>
+
+    <!-- Main Content Placeholder -->
+    <main>
+        <h1>Welcome to Azelic Technologies</h1>
+        <p>We innovate logistics with cutting-edge telematics solutions to empower your business.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms and Conditions</a></p>
+        <p>
+    </footer>
+
+    <script>
+        // Toggle the dropdown menu
+        function toggleDropdown(event) {
+            const dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('show');
+            event.stopPropagation();
+        }
+
+        // Toggle the social media menu
+        function toggleSocialMedia(event) {
+            const socialMedia = document.getElementById('socialMedia');
+            socialMedia.classList.toggle('show');
+            event.stopPropagation();
+        }
+
+        // Close dropdowns if clicked outside
+        document.addEventListener('click', function () {
+            document.getElementById('dropdown').classList.remove('show');
+            document.getElementById('socialMedia').classList.remove('show');
+        });
+    </script>
+</body>
+</html>
