@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Azelic Technologies - Innovating logistics through cutting-edge telematics.">
     <title>Azelic Technologies | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
     <link rel="icon" href="favicon.ico"> <!-- Optional: Add a favicon -->
     <style>
         /* Basic Styles */
@@ -24,33 +26,33 @@
         /* Header */
         header {
             position: relative;
-            padding: 20px 0;
+            padding: 20px;
             background-color: #2c3e50;
             color: white;
             display: flex;
-            justify-content: center; /* Center the logo in the middle */
+            justify-content: space-between; /* Space between logo, menu, and share icon */
             align-items: center;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: bold;
+            text-align: center;
+        }
+        .logo img {
+            width: 43px; /* Adjust the width as needed */
+            height: auto;/* Keeps the aspect ratio intact */
         }
 
         /* Menu Icon (Left-Top Corner) */
         .menu-icon {
-            position: absolute;
-            top: 20px;
-            left: 20px;
             font-size: 30px;
             cursor: pointer;
         }
 
         /* Share Icon (Right-Top Corner) */
         .share-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             font-size: 30px;
             cursor: pointer;
         }
@@ -135,7 +137,6 @@
             padding: 20px;
             background-color: #2c3e50;
             color: white;
-            position: relative; 
         }
 
         footer a {
@@ -148,13 +149,17 @@
         }
 
         /* Responsive Styles */
-        @media (max-width: 768px) {
+        @media (max-width: 768px){
             header {
                 padding: 15px;
             }
 
+            .logo img {
+            width: 22px; /* Adjust the width as needed */
+            height: auto;
+
             .logo {
-                font-size: 24px;
+                font-size: 45px;
             }
 
             .menu-icon,
@@ -181,11 +186,16 @@
                 right: 15px;
             }
         }
+    }
 
         @media (max-width: 480px) {
             .logo {
                 font-size: 20px;
             }
+
+            .logo img {
+            width: 22px; /* Adjust the width as needed */
+            height: auto; }
 
             main h1 {
                 font-size: 1.5rem;
@@ -215,9 +225,9 @@
     <header>
         <div class="menu-icon" onclick="toggleDropdown(event)">&#9776;</div>
         <div class="logo">
-            <img src="images/logo.png" alt="Azelic Technologies Logo">
+            <img src="images/logo.png"><span>AZELIC TECHNOLOGIES</span>
         </div>
-        <div class="share-icon" onclick="toggleSocialMedia(event)">&#9733;</div>
+        <div class="share-icon" onclick="toggleSocialMedia(event)"><i class='bx bxs-share-alt bx-flashing' style='color:#ffffff'  ></i></div>
     </header>
 
     <!-- Dropdown Menu -->
@@ -235,10 +245,11 @@
 
     <!-- Social Media Icons -->
     <div id="socialMedia" class="social-media-menu">
-        <a href="https://www.facebook.com" target="_blank">F</a>
-        <a href="https://www.twitter.com" target="_blank">T</a>
-        <a href="https://www.linkedin.com" target="_blank">L</a>
-        <a href="https://www.instagram.com" target="_blank">I</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-facebook' style='color:#ffffff'></i></a>
+        <a href="https://wa.me/?text=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-whatsapp' style='color:#ffffff' ></i></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target=" _blank"><i class='bx bxl-linkedin' style='color:#ffffff' ></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram' style='color:#ffffff' ></i></a>
+        <a href="https://t.me/share/url?url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-telegram' style='color:#ffffff'></i></a>
     </div>
 
     <!-- Main Content Placeholder -->
@@ -249,7 +260,6 @@
     <!-- Footer -->
     <footer>
         <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms and Conditions</a></p>
-        <p>
     </footer>
 
     <script>
