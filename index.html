@@ -1,287 +1,122 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Azelic Technologies - Innovating logistics through cutting-edge telematics.">
-    <title>Azelic Technologies | Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-    <link rel="icon" href="favicon.ico"> <!-- Optional: Add a favicon -->
-    <style>
-        /* Basic Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        /* Header */
-        header {
-            position: relative;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: white;
-            display: flex;
-            justify-content: space-between; /* Space between logo, menu, and share icon */
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 50px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-style: bold;
-            text-align: center;
-        }
-        .logo img {
-            width: 43px; /* Adjust the width as needed */
-            height: auto;/* Keeps the aspect ratio intact */
-        }
-
-        /* Menu Icon (Left-Top Corner) */
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        /* Share Icon (Right-Top Corner) */
-        .share-icon {
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        /* Dropdown Menu (Left Under Menu Icon) */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 60px;
-            left: 20px;
-            background-color: #34495e;
-            width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            opacity: 0;
-        }
-
-        .dropdown-menu.show {
-            display: block;
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid #2c3e50;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #1abc9c;
-        }
-
-        /* Social Media Icons (Right Under Share Icon) */
-        .social-media-menu {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            transition: transform 0.3s ease;
-            flex-direction: column; /* Align icons vertically */
-        }
-
-        .social-media-menu.show {
-            display: flex; /* Use flexbox for vertical layout */
-            flex-direction: column; /* Ensure icons are displayed vertically */
-        }
-
-        .social-media-menu a {
-            display: block; /* Make each icon take a full line */
-            width: 40px;
-            height: 40px;
-            background-color: #34495e;
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            margin: 5px 0; /* Add vertical spacing between icons */
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-
-        .social-media-menu a:hover {
-            background-color: #1abc9c;
-        }
-
-        /* Main Content */
-        main {
-            padding: 20px;
-            min-height: calc(100vh - 140px); /* Account for header and footer */
-        }
-
-        main h1 {
-            font-size: 2rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        footer a {
-            color: #1abc9c;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px){
-            header {
-                padding: 15px;
-            }
-
-            .logo img {
-            width: 22px; /* Adjust the width as needed */
-            height: auto;
-
-            .logo {
-                font-size: 45px;
-            }
-
-            .menu-icon,
-            .share-icon {
-                font-size: 26px;
-            }
-
-            main h1 {
-                font-size: 1.8rem;
-            }
-
-            .dropdown-menu {
-                width: 50%;
-                left: 0;
-                padding: 8px 0;
-            }
-
-            .dropdown-menu a {
-                padding: 10px 15px;
-            }
-
-            .social-media-menu {
-                top: 60px;
-                right: 15px;
-            }
-        }
-    }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 20px;
-            }
-
-            .logo img {
-            width: 22px; /* Adjust the width as needed */
-            height: auto; }
-
-            main h1 {
-                font-size: 1.5rem;
-            }
-
-            .dropdown-menu {
-                width: 50%;
-                left: 0;
-                padding: 6px 0;
-            }
-
-            .dropdown-menu a {
-                padding: 8px 12px;
-            }
-
-            .social-media-menu a {
-                width: 35px;
-                height: 35px;
-                line-height: 35px;
-            }
-        }
-    </style>
-</head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <div class="menu-icon" onclick="toggleDropdown(event)">&#9776;</div>
-        <div class="logo">
-            <img src="images/logo.png"><span>AZELIC TECHNOLOGIES</span>
+    <!-- Navbar -->
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
+    
+    
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slide fade">
+            <img src="images\image1.jpg" alt="Image 1">
         </div>
-        <div class="share-icon" onclick="toggleSocialMedia(event)"><i class='bx bxs-share-alt bx-flashing' style='color:#ffffff'  ></i></div>
-    </header>
+        <div class="slide fade">
+            <img src="images\image2.jpg" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="images\factory.jpeg.jpg" alt="Image 3">
+        </div>
 
-    <!-- Dropdown Menu -->
-    <div id="dropdown" class="dropdown-menu">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#blog">Blog</a>
-        <a href="#support">Support</a>
-        <a href="#careers">Careers</a>
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!-- Social Media Icons -->
-    <div id="socialMedia" class="social-media-menu">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-facebook' style='color:#ffffff'></i></a>
-        <a href="https://wa.me/?text=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-whatsapp' style='color:#ffffff' ></i></a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target=" _blank"><i class='bx bxl-linkedin' style='color:#ffffff' ></i></a>
-        <a href="https://twitter.com/intent/tweet?url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-twitter' style='color:#ffffff'></i></a>
-        <a href="https://t.me/share/url?url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-telegram' style='color:#ffffff'></i></a>
+    <!-- Dots for navigation -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="services-section">
+    <div class="service">
+        <div class="symbol">
+            <img src="images\mobile-app.png" alt="Software Development Icon">
+        </div>
+        <div class="content">
+            <h3>Software Development</h3>
+            <p>Our Software Development Services deliver high-quality web and mobile applications to enhance user engagement and streamline processes. We transform your ideas into innovative solutions with precision and efficiency.</p>
+        </div>
     </div>
 
-    <!-- Main Content Placeholder -->
-    <main>
-        
-    </main>
+    <div class="service">
+        <div class="symbol">
+            <img src="images\interview.png" alt="Consultancy Icon">
+        </div>
+        <div class="content">
+            <h3>Consultancy Services</h3>
+            <p>Our Consultancy Services provide strategic guidance and tailored solutions to help businesses streamline operations, boost efficiency, and drive growth.</p>
+        </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms and Conditions</a></p>
-    </footer>
+    <div class="service">
+        <div class="symbol">
+            <img src="images\project.png" alt="Data Analytics Icon">
+        </div>
+        <div class="content">
+            <h3>Data Analytics</h3>
+            <p>Our Data Analytics services turn raw data into actionable insights, empowering businesses to make data-driven decisions, optimize performance, and uncover growth opportunities.</p>
+        </div>
+    </div>
 
-    <script>
-        // Toggle the dropdown menu
-        function toggleDropdown(event) {
-            const dropdown = document.getElementById('dropdown');
-            dropdown.classList.toggle('show');
-            event.stopPropagation();
-        }
+</div>
+<div class="products-section">
+    <div class="product">
+        <div class="product-image">
+            <img src="images\azelic logo.jpg" alt="Hotel Application">
+        </div>
+        <div class="product-content">
+            <h3>Hotel Application</h3>
+            <p>Our Hotel Application offers a seamless experience for hotel management and guest bookings. It includes features like online room reservations, booking management, customer support, and more, making hotel operations more efficient and user-friendly.</p>
+        </div>
+    </div>
 
-        // Toggle the social media menu
-        function toggleSocialMedia(event) {
-            const socialMedia = document.getElementById('socialMedia');
-            socialMedia.classList.toggle('show');
-            event.stopPropagation();
-        }
+    <div class="product">
+        <div class="product-image">
+            <img src="images\Designer (1) (1).png" alt="Spedocity - Vehicle Booking">
+        </div>
+        <div class="product-content">
+            <h3>Spedocity - Vehicle Booking Application</h3>
+            <p>Spedocity is our state-of-the-art vehicle booking application designed to streamline vehicle rentals and transportation services. Users can easily book vehicles, track their rides, and receive real-time updates, ensuring a smooth and convenient experience.</p>
+        </div>
+    </div>
 
-        // Close dropdowns if clicked outside
-        document.addEventListener('click', function () {
-            document.getElementById('dropdown').classList.remove('show');
-            document.getElementById('socialMedia').classList.remove('show');
-        });
-    </script>
+    <div class="product">
+        <div class="product-image">
+            <img src="images\azelic logo.jpg" alt="Budget Application">
+        </div>
+        <div class="product-content">
+            <h3>Budget Application</h3>
+            <p>Our Budget App helps individuals and businesses track income, expenses, and set financial goals. With an intuitive interface and powerful features, it provides users with insights to manage their finances, save money, and plan for the future effectively.</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-image">
+            <img src="images\azelic logo.jpg" alt="School Software">
+        </div>
+        <div class="product-content">
+            <h3>School Software</h3>
+            <p>Our School Software is designed to simplify school management. From attendance and grading to scheduling and communication, it provides all the tools needed to streamline school operations, improve teacher-student engagement, and enhance administrative workflows.</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms and Conditions</a></p>
+</footer>
+
+
+    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
