@@ -43,8 +43,26 @@
         <a href="https://t.me/share/url?url=https://azelictechnologies.github.io/Azelic_Technologies_Website/" target="_blank"><i class='bx bxl-telegram' style='color:#ffffff'></i></a>
     </div>
 
-    <script src="index.js"></script>
+    <script>
+      // Toggle the dropdown menu
+function toggleDropdown(event) {
+    const dropdown = document.getElementById('dropdown');
+    dropdown.classList.toggle('show');
+    event.stopPropagation();
+}
 
-    <script src="js/header.js"></script>
+// Toggle the social media menu
+function toggleSocialMedia(event) {
+    const socialMedia = document.getElementById('socialMedia');
+    socialMedia.classList.toggle('show');
+    event.stopPropagation();
+}
+
+// Close dropdowns if clicked outside
+document.addEventListener('click', function () {
+    document.getElementById('dropdown').classList.remove('show');
+    document.getElementById('socialMedia').classList.remove('show');
+});
+    </script>
 </body>
 </html>
