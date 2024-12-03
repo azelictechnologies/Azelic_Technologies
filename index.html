@@ -115,7 +115,7 @@
     <p><a href="privacypolicy.html">Privacy Policy</a> | <a href="#terms">Terms and Conditions</a></p>
 </footer>
 
-<script src="js/header.js"></script>
+<script src="js/header.js" defer></script>
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -150,20 +150,7 @@ function showSlides(n) {
 }
 
 // Auto-change slides every 5 seconds
-setInterval(() => {
-    plusSlides(1);
-}, 5000);
-function loadNavbar() {
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'header.html', true);
-xhr.onreadystatechange = function() {
-if (xhr.readyState === 4 && xhr.status === 200) {
-    document.getElementById('navbar').innerHTML = xhr.responseText;
-}
-};
-xhr.send();
-}
-window.onload = loadNavbar;
+
 </script>
 </body>
 </html>
