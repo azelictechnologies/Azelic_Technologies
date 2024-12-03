@@ -16,3 +16,6 @@ document.addEventListener('click', function () {
     document.getElementById('dropdown').classList.remove('show');
     document.getElementById('socialMedia').classList.remove('show');
 });
+
+window.toggleDropdown = toggleDropdown;
+window.toggleSocialMedia = toggleSocialMedia;
