@@ -27,16 +27,62 @@
 .content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     padding: 10px;
+}
+
+.image-section {
     position: relative;
+    flex-basis: 40%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.image-section img {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+}
+
+.badge i {
+    color: #2333e0;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.badge span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2333e0;
+}
+
+.badge p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
 }
 
 .text-section {
     flex-basis: 55%;
     max-width: 600px;
-    margin-right: 20px;
+    margin: 0 20px;
     text-align: justify;
 }
 
@@ -75,54 +121,6 @@
     margin-right: 10px;
 }
 
-/* Image Section */
-.image-section {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 300px;
-    text-align: center;
-}
-
-.image-section img {
-    border-radius: 15px;
-    width: 100%;
-    height: auto;
-}
-
-.badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 80%;
-}
-
-.badge i {
-    color: #2333e0;
-    font-size: 24px;
-    margin-right: 10px;
-}
-
-.badge span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2333e0;
-}
-
-.badge p {
-    margin: 0;
-    font-size: 14px;
-    color: #666666;
-}
-
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .content {
@@ -130,17 +128,20 @@
         align-items: center;
     }
 
-    .image-section {
-        position: static;
-        margin-bottom: 20px;
-        max-width: 100%;
+    .image-section,
+    .text-section {
+        flex-basis: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 90%;
     }
 
     .badge {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: -20px;
+        bottom: -40px;
+        max-width: 85%;
     }
 
     .text-section h2 {
@@ -158,9 +159,8 @@
     }
 
     .badge {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: -50px;
+        max-width: 80%;
     }
 
     .text-section h2 {
@@ -192,7 +192,7 @@
     }
 
     .badge {
-        bottom: -40px;
+        bottom: -50px;
         max-width: 75%;
     }
 
