@@ -33,29 +33,93 @@
     position: relative;
 }
 
-.text-section {
-    flex-basis: 55%;
-    max-width: 600px;
-    margin-right: 20px;
-    text-align: justify;
+/* New CSS for team section */
+.team-section {
+    margin-top: 50px;
+    text-align: center;
 }
 
-.text-section h2 {
-    font-size: 36px;
-    color: #000000;
-    margin: 0;
+.team-ceo {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
 }
 
-.text-section h2 span {
-    color: #237be0;
+.team-ceo .team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.text-section p {
-    font-size: 16px;
+.team-ceo .team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-ceo .ceo-info {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.team-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    white-space: nowrap;
+    gap: 20px;
+}
+
+.team-member {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 4px solid #fff;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-info {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+.team-member:hover .team-info {
+    display: block;
+}
+
+.team-member .description {
+    font-size: 14px;
     color: #666666;
-    line-height: 1.6;
-    margin: 20px 0;
 }
+
 
 .features {
     list-style: none;
