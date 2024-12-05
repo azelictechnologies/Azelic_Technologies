@@ -1,5 +1,5 @@
- /* Basic Styles */
- * {
+/* Basic Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between; /* Space between logo, menu, and share icon */
     align-items: center;
+    z-index: 1; /* Ensure header stays above default content */
 }
 
 .logo {
@@ -29,21 +30,24 @@ header {
     font-style: bold;
     text-align: center;
 }
+
 .logo img {
     width: 43px; /* Adjust the width as needed */
-    height: auto;/* Keeps the aspect ratio intact */
+    height: auto; /* Keeps the aspect ratio intact */
 }
 
 /* Menu Icon (Left-Top Corner) */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
+    z-index: 2; /* Ensure menu icon stays above content */
 }
 
 /* Share Icon (Right-Top Corner) */
 .share-icon {
     font-size: 30px;
     cursor: pointer;
+    z-index: 2; /* Ensure share icon stays above content */
 }
 
 /* Dropdown Menu (Left Under Menu Icon) */
@@ -58,6 +62,7 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
+    z-index: 100; /* Ensure dropdown appears above all content */
 }
 
 .dropdown-menu.show {
@@ -86,6 +91,7 @@ header {
     right: 20px;
     transition: transform 0.3s ease;
     flex-direction: column; /* Align icons vertically */
+    z-index: 100; /* Ensure social media icons appear above all content */
 }
 
 .social-media-menu.show {
@@ -109,18 +115,19 @@ header {
 .social-media-menu a:hover {
     background-color: #1abc9c;
 }
+
 /* Footer */
 
-
 /* Responsive Styles */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     header {
         padding: 15px;
     }
 
     .logo img {
-    width: 22px; /* Adjust the width as needed */
-    height: auto;
+        width: 22px; /* Adjust the width as needed */
+        height: auto;
+    }
 
     .logo {
         font-size: 45px;
@@ -146,7 +153,6 @@ header {
         right: 15px;
     }
 }
-}
 
 @media (max-width: 480px) {
     .logo {
@@ -154,8 +160,9 @@ header {
     }
 
     .logo img {
-    width: 22px; /* Adjust the width as needed */
-    height: auto; }
+        width: 22px; /* Adjust the width as needed */
+        height: auto;
+    }
 
     .dropdown-menu {
         width: 50%;

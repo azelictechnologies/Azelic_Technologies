@@ -230,6 +230,7 @@ footer a:hover {
 
     .text-section p {
         font-size: 14px;
+        text-align: justify;
     }
 
     .image-section {
@@ -245,8 +246,12 @@ footer a:hover {
         align-items: center; /* Center align */
     }
 
-    .image-section, .text-section {
-        flex-basis: 100%; /* Take full width */
+    .image-section{
+        flex-basis: 40%;
+    }
+
+    .text-section {
+        flex-basis: 55%; /* Take full width */
         margin: 0; /* Remove margins for stacked layout */
     }
 }
@@ -262,5 +267,6 @@ footer a:hover {
 
     .text-section p {
         font-size: 14px;
+        text-align: justify;
     }
 }
