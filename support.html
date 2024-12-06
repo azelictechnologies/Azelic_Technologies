@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Azelic Technologies</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-section {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background-color: #333;
+            color: rgb(44, 119, 185);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #555;
+        }
+
+        /* Hide content by default */
+        .services-list,
+        .quote-info,
+        .support-info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">Azelic Support</h1>
+    <div class="section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <p>Find answers to the most common questions about our services:</p>
+        <ul>
+            <li><strong>What services do you offer?</strong>
+                <ul class="services-list">
+                    <li>Data Analytics</li>
+                    <li>Website Development</li>
+                    <li>Application Development</li>
+                    <li>Consultancy Services</li>
+                </ul>
+            </li>
+            <li><strong>How can I get a quote for a service?</strong>
+                <div class="quote-info">
+                    <p>You can get in touch with us via email or call us directly for a personalized quote based on your project needs.</p>
+                </div>
+            </li>
+            <li><strong>Do you offer customer support after service delivery?</strong>
+                <div class="support-info">
+                    <p>Yes, we provide ongoing support and maintenance for our projects. Please contact us for further details.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Self-Help Resources</h2>
+        <p>Check out these helpful resources to resolve common issues:</p>
+        <ul>
+            <li><a href="#">User Guides</a></li>
+            <li><a href="#">How-to Tutorials</a></li>
+            <li><a href="#">System Setup Instructions</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        // Select elements for toggling
+        const servicesLink = document.querySelector("strong");
+        const servicesList = document.querySelector(".services-list");
+
+        const quoteLink = document.querySelectorAll("li strong")[1];
+        const quoteInfo = document.querySelector(".quote-info");
+
+        const supportLink = document.querySelectorAll("li strong")[2];
+        const supportInfo = document.querySelector(".support-info");
+
+        // Toggle functionality for "What services do you offer?"
+        servicesLink.addEventListener("click", function () {
+            if (servicesList.style.display === "none" || servicesList.style.display === "") {
+                servicesList.style.display = "block"; // Show the list
+            } else {
+                servicesList.style.display = "none"; // Hide the list
+            }
+        });
+
+        // Toggle functionality for "How can I get a quote for a service?"
+        quoteLink.addEventListener("click", function () {
+            if (quoteInfo.style.display === "none" || quoteInfo.style.display === "") {
+                quoteInfo.style.display = "block"; // Show the quote info
+            } else {
+                quoteInfo.style.display = "none"; // Hide the quote info
+            }
+        });
+
+        // Toggle functionality for "Do you offer customer support after service delivery?"
+        supportLink.addEventListener("click", function () {
+            if (supportInfo.style.display === "none" || supportInfo.style.display === "") {
+                supportInfo.style.display = "block"; // Show the support info
+            } else {
+                supportInfo.style.display = "none"; // Hide the support info
+            }
+        });
+    </script>
+
+</body>
+
+</html>
