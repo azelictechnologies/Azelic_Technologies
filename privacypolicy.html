@@ -1,44 +1,13 @@
 <html>
 <head>
     <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-        }
-        .container {
-            width: 80%;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #d1e0f4; /* Silver/Grey color */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for blending effect */
-            border-radius: 8px; /* Rounded edges for smoother look */
-        }
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        h2 {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        a {
-            color: #0066c0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="css/PP.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
     <div class="container">
         <h1>PRIVACY POLICY</h1>
         <h2>Collection of Your Information</h2>
@@ -57,4 +26,19 @@
         <p>Our company is committed to providing seamless customer support. The web application allows you to book vehicles, manage profiles, view vehicle ratings, calculate prices, and more. Should you have any questions or concerns regarding your data, or need assistance with any feature, our support team is available to help.</p>
     </div>
 </body>
+<script>
+    function loadNavbar() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'header.html', true);
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        document.getElementById('navbar').innerHTML = xhr.responseText;
+    }
+    };
+    xhr.send();
+    }
+    window.onload = loadNavbar;
+    
+</script>
+<script src="js/header.js"></script>
 </html>
