@@ -189,6 +189,7 @@ footer a:hover {
   font-size: 0.95em;
   line-height: 1.5em;
   z-index: 1; 
+  text-align: justify;
 }
 
 
@@ -258,6 +259,7 @@ footer a:hover {
   color: #555;
   font-size: 1em;
   line-height: 1.5em;
+  text-align: justify;
 }
 
 /* Responsive adjustments */
