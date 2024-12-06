@@ -189,54 +189,7 @@ footer a:hover {
   line-height: 1.5em;
   z-index: 1; 
 }
-.company-review {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-}
 
-.review-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.review-stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .review-stats {
-      flex-direction: column; /* Align stats side by side on larger screens */
-  }
-}
-
-.stat-box {
-  background-color: #f0f0f0;
-  width: calc(25% - 20px); /* Reduced width to 25% */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-}
-
-.stat-box h2 {
-  font-size: 36px;
-  margin: 0;
-  color: #007bff;
-}
-
-.stat-box p {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #777;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
