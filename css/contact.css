@@ -53,7 +53,8 @@ header nav a.active {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(10px);
     max-width: 600px;
 }
 
@@ -101,7 +102,7 @@ header nav a.active {
     display: inline-block;
     width: 100%;
     padding: 12px 20px;
-    background: #1abc9c;
+    background: #34495e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -111,7 +112,7 @@ header nav a.active {
 }
 
 .contact-form button:hover {
-    background: #16a085;
+    background: #34495e;
 }
 
 footer {
