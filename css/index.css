@@ -212,7 +212,7 @@ footer a:hover {
 
 @media (min-width: 768px) {
   .review-stats {
-      flex-direction: row; /* Align stats side by side on larger screens */
+      flex-direction: column; /* Align stats side by side on larger screens */
   }
 }
 
