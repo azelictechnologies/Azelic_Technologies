@@ -37,6 +37,7 @@ body {
     margin-bottom: 15px;
     color: #2c3e50;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .contact-info p {
@@ -110,6 +111,7 @@ footer {
         flex: 1 1 100%;
         max-width: 90%;
         margin: 10px 0;
+        font: 2em sans-serif;
     }
 }
 
