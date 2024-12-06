@@ -113,6 +113,11 @@ footer {
         margin: 10px 0;
         font: 2em sans-serif;
     }
+    .contact-info p {
+        margin: 20px 0;
+        color: #555;
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 768px) {
