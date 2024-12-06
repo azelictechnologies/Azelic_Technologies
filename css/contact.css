@@ -99,6 +99,16 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
 }
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    z-index: 1; 
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    z-index: 1; 
+  }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
