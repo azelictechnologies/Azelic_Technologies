@@ -4,16 +4,18 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background:white ;
+    background:#30354a ;
 }
 
 .contact-header {
-    background: #f4f4f4;
+    background: #30354a;
+    color:white;
     text-align: center;
     padding: 50px 20px;
 }
 
 .contact-section {
+    background-color: #30354a;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
