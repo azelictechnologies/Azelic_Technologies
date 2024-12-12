@@ -4,18 +4,18 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background:#30354a ;
+    background:#315374 ;
 }
 
 .contact-header {
-    background: #30354a;
+    background: #315374;
     color:white;
     text-align: center;
     padding: 50px 20px;
 }
 
 .contact-section {
-    background-color: #30354a;
+    background-color: #315374;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -90,7 +90,7 @@ body {
 }
 
 .contact-form button:hover {
-    background: #34495e;
+    background: #315374;
 }
 
 footer {
