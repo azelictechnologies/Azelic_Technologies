@@ -4,82 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials - Azelic Technologies</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your external CSS file -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #30354a;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h2 {
-            color: white;
-            text-align: center;
-        }
-
-        .testimonials-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .testimonial {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .testimonial:hover {
-            transform: scale(1.05);
-        }
-
-        .testimonial h3 {
-            color: #333;
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-        }
-
-        .testimonial p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .testimonial .client-name {
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
 
     <div class="container">
 
@@ -115,5 +48,20 @@
     </div>
 
 </body>
+<script>
+    function loadNavbar() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'header.html', true);
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        document.getElementById('navbar').innerHTML = xhr.responseText;
+    }
+    };
+    xhr.send();
+    }
+    window.onload = loadNavbar;
+    
+</script>
+<script src="js/header.js"></script>
 
 </html>
