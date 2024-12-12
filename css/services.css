@@ -167,3 +167,21 @@ p {
 .share-popup i:hover {
     color: #0073e6;
 }
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    z-index: 1; 
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    z-index: 1; 
+  }
