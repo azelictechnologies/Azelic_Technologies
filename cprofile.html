@@ -1,0 +1,132 @@
+<html>
+<head>
+    <link href="css/cprofile.css" rel='stylesheet'>
+    <link href="css/header.css" rel='stylesheet'>
+    <link href="css/circle.css" rel='stylesheet'>
+</head>
+<bbody class="bbody">
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
+    <div class="container">
+        <div class="h_header">
+            <h1>AZELIC Technology</h1>
+            <h2>Where Passion Meets Eagerness</h2>
+            <p>Headquarters: Tumkur, Karnataka, India</p>
+        </div>
+
+        <section class="about">
+            <h3>About Us</h3>
+            <p>Welcome to AZELIC Technology, where we embody the spirit of innovation and social responsibility. Located in the vibrant city of Tumkur, Karnataka, India, we are a passionate team of six final-year Bachelor of Engineering students dedicated to transforming ideas into impactful technological solutions. Our slogan, "Where Passion Meets Eagerness," represents our unwavering commitment to excellence and creativity in the software industry.</p>
+        </section>
+
+        <section class="mission">
+            <h3>Mission Statement</h3>
+            <p>Our mission is to leverage advanced technology to create transformative solutions that enhance lives, foster connections, and drive societal progress. We aim to empower individuals and businesses by developing user-centric applications that address real-world challenges and unlock new possibilities.</p>
+        </section>
+
+        <section class="vision">
+            <h3>Vision Statement</h3>
+            <p>At AZELIC Technology, we envision a future where our innovative software solutions pave the way for smarter communities and healthier lives. We aspire to be at the forefront of technological advancement, recognized for our contributions to AI, healthcare, tourism, and business integration. Our goal is to inspire change and facilitate a better tomorrow through the power of technology.</p>
+        </section>
+
+        <section class="team">
+            <h3>Our Team</h3>
+            <div class="graphic">
+            <div class="c_container">
+                <div class="circle">
+                    <svg viewBox="-300 -300 600 600">
+                        <path class="curve" d="M 0 -210 A 210 210 0 0 1 180 -105" />
+                        <path class="curve" d="M 180 -105 A 210 210 0 0 1 210 0" />
+                        <path class="curve" d="M 210 0 A 210 210 0 0 1 180 105" />
+                        <path class="curve" d="M 180 105 A 210 210 0 0 1 0 210" />
+                        <path class="curve" d="M 0 210 A 210 210 0 0 1 -180 105" />
+                        <path class="curve" d="M -180 105 A 210 210 0 0 1 -210 0" />
+                        <path class="curve" d="M -210 0 A 210 210 0 0 1 -180 -105" />
+                        <path class="curve" d="M -180 -105 A 210 210 0 0 1 0 -210" />
+                    </svg>
+                    <div class="node" style="--i: 1;">
+                        <div class="circle-node">
+                            <img src="images/tom.jpg">
+                        </div>
+                        <span>Akhilesh</span>
+                    </div>
+                    <div class="node" style="--i: 2;">
+                        <div class="circle-node">
+                            <img src="images/ben.jpg">
+                        </div>
+                        <span>Syed </span>
+                    </div>
+                    <div class="node" style="--i: 3;">
+                        <div class="circle-node">
+                            <img src="images/angela.jpg"/>
+                        </div>
+                        <span>Sahana G</span>
+                    </div>
+                    <div class="node" style="--i: 4;">
+                        <div class="circle-node">
+                            <img src="images/ginger.jpg"/>
+                        </div>
+                        <span>Navyashri S</span>
+                    </div>
+                    <div class="node" style="--i: 5;">
+                        <div class="circle-node">
+                            <img src="images/hank.jpg"/>
+                        </div>
+                        <span>N Kavya</span>
+                    </div>
+                    <div class="node" style="--i: 6;">
+                        <div class="circle-node">
+                            <img src="images/rabbit.jpg"/>
+                        </div>
+                        <span>Sanjana</span>
+                    </div>
+                </div>
+                <div class="c_company-name">AZELIC TECHNOLOGIES</div>
+            </div>
+        </div>
+            <p>AZELIC Technology is led by a diverse group of six BE final-year students, each bringing unique expertise and perspectives to our projects. Our collaborative and inclusive culture fosters creativity, enabling us to tackle challenges with innovative solutions. We believe that together, we can achieve remarkable feats..</p>
+        </section>
+
+        <section class="values">
+            <h3>Core Values</h3>
+            <ul>
+                <li><strong>Innovation:</strong> We are committed to pushing boundaries and exploring new ideas to create cutting-edge solutions.</li>
+                <li><strong>Social Responsibility:</strong> Our projects focus on enhancing the well-being of society.</li>
+                <li><strong>Excellence:</strong> We prioritize quality in every aspect of our work.</li>
+                <li><strong>Collaboration:</strong> We thrive on teamwork, recognizing that diverse viewpoints lead to more robust solutions.</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h3>Current Project</h3>
+            <h4>Spedocity</h4>
+            <p> Our flagship logistics and transportation software, designed to optimize supply chain operations and improve service delivery. Currently under development, Spedocity aims to revolutionize the logistics industry by enhancing efficiency and connectivity.</p>
+        </section>
+
+        <section class="commitment">
+            <h3>Commitment to Growth</h3>
+            <p>As a startup, we recognize that we are at the beginning of our journey. While we currently have no formal achievements to showcase, our passion for learning and adapting will guide us toward success. We are eager to take on challenges, learn from experiences, and contribute to the ever-evolving tech landscape.
+            </p>
+        </section>
+    </div>
+    <div class="download-section">
+        <a href="company_profile.txt" class="download-button">Download Company Profile</a>
+    </div>
+</bbody>
+<script>
+    function loadNavbar() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'header.html', true);
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        document.getElementById('navbar').innerHTML = xhr.responseText;
+    }
+    };
+    xhr.send();
+    }
+    window.onload = loadNavbar;
+    
+</script>
+<script src="js/header.js"></script>
+</html>

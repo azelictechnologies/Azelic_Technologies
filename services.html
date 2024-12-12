@@ -1,28 +1,142 @@
 <html>
-<head>
-  <title>
-   Our Vision
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-  
-  </style>
-</head>
-<body>
-  <div class="container">
-   <div class="text-content">
-    <h1>
-     Azelic Services
-    </h1>
-    <p>
-        Our company aims to revolutionize the logistics and transportation industry by offering secure, affordable, and efficient solutions that empower both businesses and individuals to move goods seamlessly. We are committed to becoming the most trusted partner in delivering reliable and transparent services, ensuring that every load reaches its destination safely and swiftly. Our vision is to create a future where logistics is simplified and accessible to all, driving economic growth and enhancing customer satisfaction.    </p>
-    <a class="download-button" href="index.html">
-     Visit Website
-    </a>
-   </div>
-   <div class="image-content">
-    <img alt="Illustration of a truck delivering goods with a cityscape in the background" height="250" src="https://img.freepik.com/premium-vector/loader-unloads-goods-from-truck-delivery-service-moving_165429-104.jpg"/>
-   </div>
-  </div>
-</body>
+    <head>
+        <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" href="css/header.css">
+    </head>
+<body class='bbody'>
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
+    <div class="ccontainer">
+    
+        <!-- Introduction Section -->
+        <div class="ssection">
+            <h1>Our Services</h1>
+            <p>At Standard Company, we offer a range of services designed to meet the evolving needs of our clients. From software development to data solutions, we help businesses succeed.</p>
+        </div>
+    
+        <!-- Discover Our Innovative Services Section -->
+        <div class="discover-innovative-services">
+            <h2>Discover Our Innovative Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code icon"></i>
+                    <h3>Software Development</h3>
+                    <p>High-quality software tailored to your needs.</p>
+                    <button class="button">View More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>Data Analytics</h3>
+                    <p>Transform data into actionable insights.</p>
+                    <button class="button">View More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-cloud icon"></i>
+                    <h3>Cloud Services</h3>
+                    <p>Secure, scalable cloud infrastructure.</p>
+                    <button class="button">View More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt icon"></i>
+                    <h3>Mobile Development</h3>
+                    <p>Engaging mobile applications for your users.</p>
+                    <button class="button">View More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-lock icon"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Protecting your assets from threats.</p>
+                    <button class="button">View More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-comments icon"></i>
+                    <h3>Feedback System</h3>
+                    <p>Share your thoughts and help us improve.</p>
+                    <button class="button">Give Feedback</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Ongoing Projects Section -->
+        <div class="ongoing-projects-container">
+            <h2>Ongoing Projects</h2>
+            <p>We are engaged in various projects showcasing our commitment to innovation.</p>
+    
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-rocket icon"></i>
+                    <h3>Project Alpha</h3>
+                    <p>AI-driven analytics platform for deeper insights.</p>
+                    <button class="button">View Details</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-cogs icon"></i>
+                    <h3>Project Beta</h3>
+                    <p>Cloud-based solutions for productivity.</p>
+                    <button class="button">View Details</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-database icon"></i>
+                    <h3>Project Gamma</h3>
+                    <p>Data management system for large enterprises.</p>
+                    <button class="button">View Details</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Customer Service Section -->
+        <div class="customer-service-container">
+            <h2>Customer Service</h2>
+            <p>We're here to assist you. Reach out to our support team for any inquiries.</p>
+    
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-headset icon"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Available anytime to assist you.</p>
+                    <button class="button">Contact Us</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-question-circle icon"></i>
+                    <h3>FAQs</h3>
+                    <p>Find answers to common questions.</p>
+                    <button class="button">Learn More</button>
+                </div>
+    
+                <div class="service-card">
+                    <i class="fas fa-comments icon"></i>
+                    <h3>Live Chat</h3>
+                    <p>Chat with us for quick responses.</p>
+                    <button class="button">Start Chat</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    </body>
+    <script>
+        function loadNavbar() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'header.html', true);
+        xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('navbar').innerHTML = xhr.responseText;
+        }
+        };
+        xhr.send();
+        }
+        window.onload = loadNavbar;
+    </script>
+    <script src="js/header.js"></script>
 </html>
