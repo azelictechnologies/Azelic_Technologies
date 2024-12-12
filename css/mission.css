@@ -1,0 +1,180 @@
+.bbody {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #315374;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.box-container {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 70px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.image-section {
+    position: relative;
+    flex-basis: 40%; /* Adjust the width as needed */
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 50px; /* Adjust the spacing between sections */
+}
+
+.image-section img {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+}
+
+.badge i {
+    color: #2333e0;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.badge span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2333e0;
+}
+
+.badge p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.text-section {
+    flex-basis: 55%; /* Adjust the width as needed */
+    max-width: 600px;
+    margin: 0 20px; /* Adjusted margin for uniform spacing */
+    text-align: justify;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    color: #000000;
+    margin: 0;
+}
+
+.text-section h2 span {
+    color: #237be0;
+}
+
+.text-section p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.features li i {
+    color: #2375e0;
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .image-section {
+        flex-basis: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+        margin-top:0;
+        margin-left:10px; /* Add space between sections */
+    }
+
+    .text-section {
+        flex-basis: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margins for uniform spacing */
+        text-align: justify; /* Center text on smaller screens */
+    }
+
+    .badge {
+        bottom: -40px; /* Adjust badge position */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section h2 {
+        font-size: 24px; /* Smaller font for headings */
+    }
+
+    .text-section p {
+        font-size: 14px; /* Maintain readability */
+    }
+
+    .badge {
+        padding: 8px 12px; /* Adjust padding for the badge */
+        font-size: 14px; /* Ensure badge text is readable */
+    }
+
+    .badge span {
+        font-size: 16px; /* Adjust badge count size */
+    }
+
+    .badge p {
+        font-size: 12px; /* Adjust badge description size */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Ensure image scales properly */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .features li {
+        font-size: 14px; /* Smaller font for features list */
+    }
+}
