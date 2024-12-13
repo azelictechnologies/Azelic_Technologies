@@ -4,82 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Guide</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    h1 {
-      text-align: center;
-      margin: 20px 0;
-      color: #333;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      padding: 20px;
-    }
-
-    .step {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width: 100%; /* Full width */
-      max-width: 1200px; /* Increased max-width */
-    }
-
-    .step img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .step h2 {
-      margin: 10px 0;
-      color: #333;
-    }
-
-    .step p {
-      color: #555;
-    }
-  </style>
+  <link href="css/user_guide.css" rel='stylesheet'>
 </head>
 <body>
 
   <h1>User Guide</h1>
   <div class="container">
     <div class="step">
-      <img src="/images/userguide1.png" alt="Step 1">
+      <img src="images/userguide1.png" alt="Step 1">
       <h2><strong>Step 1</strong></h2>
       <p><strong>Tap on the Menu Icon</strong></p>
     </div>
 
     <div class="step">
-      <img src="/images/userguide2.png" alt="Step 2">
+      <img src="images/userguide2.png" alt="Step 2">
       <h2><strong>Step 2</strong></h2>
       <p><strong>Select any of the Menu Content</strong></p>
     </div>
 
     <div class="step">
-      <img src="/images/userguide3.png" alt="Step 3">
+      <img src="images/userguide3.png" alt="Step 3">
       <h2><strong>Step 3</strong></h2>
       <p><strong>You can share our website link in any of the Social Media platforms</strong></p>
     </div>
 
     <div class="step">
-      <img src="/images/userguide4.png" alt="Step 4">
+      <img src="images/userguide4.png" alt="Step 4">
       <h2><strong>Step 4</strong></h2>
       <p><strong>By scrolling down in the Home Page you can also view our Privacy Policy and Terms & Conditions by tapping on it</strong></p>
     </div>
   </div>
+
+  <div class="back-button-container">
+    <button class="back-button" onclick="loadPage('support.html')">← Back</button>
+</div>
 
 </body>
 </html>

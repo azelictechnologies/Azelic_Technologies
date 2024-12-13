@@ -1,0 +1,125 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Increased max-width */
+}
+
+.step img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.step h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.step p {
+    color: #555;
+}
+
+/* Back Button Fixed to Bottom Right */
+.back-button-container {
+    position: fixed; /* Fixes the position on the screen */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+}
+
+/* Back Button Styling */
+.back-button {
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    padding: 10px 20px; /* Adds padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+/* Back Button Hover Effect */
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Responsive Design */
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        gap: 20px;
+    }
+
+    .step {
+        padding: 15px; /* Reduce padding inside steps */
+    }
+
+    .step img {
+        border-radius: 5px; /* Adjust border radius for smaller screens */
+    }
+
+    .back-button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+}
+
+/* Extra Small Screens (Very Small Mobile Devices) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    .step h2 {
+        font-size: 16px; /* Adjust heading size */
+    }
+
+    .step p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .back-button {
+        font-size: 12px; /* Smaller button font */
+        padding: 6px 10px; /* Smaller button padding */
+    }
+}
+
+/* Large Screens (Desktop and Larger Devices) */
+@media (min-width: 1201px) {
+    .container {
+        padding: 40px; /* Add more padding for larger screens */
+    }
+
+    .step {
+        padding: 30px; /* Increase step padding for larger screens */
+    }
+}
