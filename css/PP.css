@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -39,6 +39,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    z-index: 1; 
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    z-index: 1; 
+  }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {

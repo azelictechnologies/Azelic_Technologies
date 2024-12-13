@@ -1,84 +1,187 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+.bbody {
+    font-family: 'Times New Roman', serif;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.container {
-display: flex;
-align-items: center;
-background-color: #ffffff;
-padding: 40px;
-border-radius: 8px;
-flex-wrap: wrap;
-max-width: 900px;
-margin: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add this line */
+    padding: 0; /* Light background */
+    color: #333; /* Standard text color */
+    background-color: #315374;
 }
 
-.text-content {
-    flex: 1;
-    max-width: 500px;
-    margin-right: 40px;
+.ccontainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
 }
-.text-content h1 {
-    font-size: 36px;
-    color: #333333;
-    margin-bottom: 10px;
-}
-.text-content p {
-    font-size: 18px;
-    color: #7a7a7a;
-    line-height: 1.6;
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Main heading color */
     margin-bottom: 20px;
+    font-size: 36px;
+    text-transform: uppercase;
+    display: inline-block; /* Make underline only under text */
+    border-bottom: 2px solid #e74c3c; /* Add underline */
+    padding-bottom: 10px; /* Space between text and underline */
 }
-.download-button {
+
+h1:hover {
+    color: #e74c3c; /* Change color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+h2 {
+    text-align: center;
+    color: #e74c3c; /* Section heading color */
+    margin: 30px 0 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #e74c3c;
     display: inline-block;
-    background-color: #2388e0;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+p {
+    color: #555; /* Slightly darker text for better readability */
+    line-height: 1.8;
+    margin-bottom: 20px;
     font-size: 16px;
 }
-.image-content {
-    flex: 1;
-    max-width: 350px; /* Increased from 300px */
+
+/* Modify the height of the "Our Services" section */
+.ssection {
+    position: relative;
+    padding: 20px 20px; /* Reduced padding */
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    background: #ffffff; /* White background for content */
+    transition: all 0.3s ease; /* Transition effect for smoothness */
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #ffffff; /* White background for cards */
+    padding: 30px;
     text-align: center;
-}
-.image-content img {
-    width: 100%;
-    max-width: 500px; /* Increased from 300px */
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .text-content {
-        margin-right: 0;
-        text-align: center;
-    }
-    .download-button {
-        margin: 20px auto;
-    }
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dfe6e9; /* Soft border for clarity */
 }
 
-@media (max-width: 480px) {
-    .text-content h1 {
-        font-size: 28px;
-    }
-    .text-content p {
-        font-size: 16px;
-    }
-    .download-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9; /* Lighter background on hover */
 }
+
+.service-card img {
+    width: 60px; /* Adjusted image size */
+    height: 60px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover img {
+    transform: scale(1.1); /* Zoom effect on icon hover */
+}
+
+.service-card h3 {
+    color: #2980b9; /* Service title color */
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500; /* Bold for emphasis */
+}
+
+.service-card p {
+    color: #7f8c8d; /* Service description color */
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+    display: none; /* Initially hidden */
+    background-color: #e74c3c; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.service-card:hover .button {
+    display: inline-block; /* Show button on hover */
+}
+
+/* Unique Styling for Ongoing Projects and Customer Service Sections */
+.ongoing-projects-container, .customer-service-container, .discover-innovative-services {
+    background: linear-gradient(135deg, #e8f5e9 30%, #fce4ec 70%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ongoing-projects-container h2, .customer-service-container h2, .discover-innovative-services h2 {
+    color: #2c3e50; /* Darker heading color for contrast */
+}
+
+.ongoing-projects-container p, .customer-service-container p, .discover-innovative-services p {
+    color: #34495e; /* Darker text for better readability */
+}
+.share-icon {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.share-popup {
+    display: none;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.share-popup i {
+    font-size: 1.2em;
+    color: #555;
+    transition: color 0.3s;
+}
+.share-popup i:hover {
+    color: #0073e6;
+}
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    z-index: 1; 
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    z-index: 1; 
+  }

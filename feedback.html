@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+
+<body class="bbody">
+    <div id="navbar">
+        <object type="text/html" data="header.html" style="width:100%; height:50px;"></object>
+    </div>
+
+    <div class="container">
+        <h1>User Feedback</h1>
+
+        <button class="toggle-feedback-button" id="toggleFeedbackBtn">Give Feedback</button>
+        <button class="my-feedbacks-button" id="myFeedbacksBtn">My Feedbacks</button>
+
+        <div id="feedbackFormContainer" class="hidden">
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback_text" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Feedback</button>
+            </form>
+        </div>
+
+        <h2>Previous Feedback</h2>
+        <div id="feedbackList" class="feedback-list">
+            <!-- Feedback items will be dynamically added here -->
+        </div>
+    </div>
+</body>
+<script src="js/feedback.js"></script>
+<script>
+    function loadNavbar() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'header.html', true);
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        document.getElementById('navbar').innerHTML = xhr.responseText;
+    }
+    };
+    xhr.send();
+    }
+    window.onload = loadNavbar;
+    
+</script>
+<script src="js/header.js"></script>
+</html>
